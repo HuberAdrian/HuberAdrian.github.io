@@ -378,3 +378,127 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== Writing Page Styles ===== */
+.page-title {
+    margin: 2rem 0 1.5rem;
+}
+
+.page-title h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.topic-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.5rem 0 2rem;
+}
+
+.filter-item {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background-color: var(--surface);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: var(--text);
+    transition: all 0.2s ease;
+    border: 1px solid var(--border);
+}
+
+.filter-item:hover {
+    background-color: rgba(67, 97, 238, 0.1);
+    transform: translateY(-2px);
+}
+
+.filter-item.active {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.articles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.article-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--surface);
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+}
+
+.article-date {
+    flex: 0 0 100px;
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.article-content {
+    flex: 1;
+}
+
+.article-content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.article-content h2 a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.article-content h2 a:hover {
+    color: var(--primary);
+}
+
+.article-excerpt {
+    margin-bottom: 1rem;
+}
+
+.article-excerpt p {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.article-meta {
+    display: flex;
+    gap: 0.5rem;
+}
+
+nav ul li a.active {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+/* Responsive adjustments for writing page */
+@media screen and (max-width: 768px) {
+    .topic-filter {
+        justify-content: center;
+    }
+    
+    .article-item {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .article-date {
+        flex: 0 0 auto;
+    }
+}
