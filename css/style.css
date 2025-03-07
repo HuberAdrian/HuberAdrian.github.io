@@ -502,3 +502,348 @@ nav ul li a.active {
         flex: 0 0 auto;
     }
 }
+
+
+
+
+/* ===== Post Styles ===== */
+.post {
+    margin: 2rem 0 3rem;
+}
+
+.post-header {
+    margin-bottom: 2rem;
+}
+
+.post-title {
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.post-content {
+    line-height: 1.7;
+}
+
+.post-content h1, 
+.post-content h2, 
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    margin: 1.5em 0 0.75em;
+}
+
+.post-content h1 {
+    font-size: 2rem;
+}
+
+.post-content h2 {
+    font-size: 1.6rem;
+}
+
+.post-content h3 {
+    font-size: 1.3rem;
+}
+
+.post-content p {
+    margin-bottom: 1.5em;
+}
+
+.post-content ul, 
+.post-content ol {
+    margin: 0 0 1.5em 2em;
+}
+
+.post-content li {
+    margin-bottom: 0.5em;
+}
+
+.post-content blockquote {
+    border-left: 4px solid var(--primary);
+    padding-left: 1rem;
+    margin-left: 0;
+    color: rgba(0, 0, 0, 0.7);
+    font-style: italic;
+}
+
+.post-content code {
+    font-family: 'Source Code Pro', monospace;
+    background-color: var(--surface);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+.post-content pre {
+    background-color: var(--surface);
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1.5em 0;
+}
+
+.post-content pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+.post-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--text);
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--primary);
+}
+
+
+
+
+/* ===== Projects Page Styles ===== */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.project-item {
+    display: flex;
+    background-color: var(--surface);
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    flex: 0 0 250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-details {
+    flex: 1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-details h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.project-date {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.project-tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.project-description {
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+.project-description p {
+    font-size: 0.95rem;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-link {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.project-link:first-child {
+    background-color: var(--primary);
+    color: white;
+}
+
+.project-link:first-child:hover {
+    background-color: var(--secondary);
+}
+
+.project-link:last-child {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.project-link:last-child:hover {
+    background-color: rgba(67, 97, 238, 0.1);
+}
+
+/* ===== Research Page Styles ===== */
+.research-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0 3rem;
+}
+
+.research-item {
+    padding: 1.5rem;
+    background-color: var(--surface);
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+}
+
+.research-content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.research-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+}
+
+.research-date {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.research-tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.research-abstract {
+    margin-bottom: 1.25rem;
+}
+
+.research-abstract p {
+    font-size: 0.95rem;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.research-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.research-link {
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.research-link:first-child {
+    background-color: var(--primary);
+    color: white;
+}
+
+.research-link:first-child:hover {
+    background-color: var(--secondary);
+}
+
+.research-link:last-child {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.research-link:last-child:hover {
+    background-color: rgba(67, 97, 238, 0.1);
+}
+
+/* Responsive styles for projects and research pages */
+@media screen and (max-width: 768px) {
+    .project-item {
+        flex-direction: column;
+    }
+    
+    .project-image {
+        flex: 0 0 auto;
+        height: 200px;
+    }
+    
+    .research-meta,
+    .project-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project-links,
+    .research-links {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .project-link,
+    .research-link {
+        text-align: center;
+    }
+}

@@ -1,0 +1,121 @@
+---
+layout: default
+title: Projects
+---
+<div class="page-title">
+    <h1>Projects</h1>
+</div>
+
+<div class="topic-filter">
+    <button class="filter-item active" data-category="all">All</button>
+    <button class="filter-item" data-category="quantum">#quantum</button>
+    <button class="filter-item" data-category="hardware">#hardware</button>
+    <button class="filter-item" data-category="software">#software</button>
+    <button class="filter-item" data-category="ai">#ai</button>
+</div>
+
+<div class="projects-container">
+    <!-- Quantum Simulator Project -->
+    <div class="project-item" data-categories="quantum software">
+        <div class="project-image">
+            <img src="{{ '/wp-content/uploads/2022/03/quantum-simulator.jpg' | relative_url }}" alt="Quantum Circuit Simulator">
+        </div>
+        <div class="project-details">
+            <h2>Quantum Circuit Simulator</h2>
+            <div class="project-meta">
+                <span class="project-date">March 2022</span>
+                <div class="project-tags">
+                    <span class="tag">#quantum</span>
+                    <span class="tag">#software</span>
+                </div>
+            </div>
+            <div class="project-description">
+                <p>A browser-based quantum circuit simulator for educational purposes. This interactive tool allows users to build quantum circuits and visualize quantum states, making quantum computing concepts more accessible.</p>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/username/quantum-simulator" class="project-link" target="_blank">View on GitHub</a>
+                <a href="{{ '/projects/quantum-simulator/' | relative_url }}" class="project-link">Project Details</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Drone Navigation Project -->
+    <div class="project-item" data-categories="hardware ai">
+        <div class="project-image">
+            <img src="{{ '/wp-content/uploads/2023/08/drone-navigation.jpg' | relative_url }}" alt="Autonomous Drone Navigation">
+        </div>
+        <div class="project-details">
+            <h2>Autonomous Drone Navigation</h2>
+            <div class="project-meta">
+                <span class="project-date">August 2023</span>
+                <div class="project-tags">
+                    <span class="tag">#hardware</span>
+                    <span class="tag">#ai</span>
+                </div>
+            </div>
+            <div class="project-description">
+                <p>Computer vision system for indoor drone navigation. This project uses deep learning to enable drones to navigate indoor spaces without GPS, using only onboard cameras and sensors for localization.</p>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/username/drone-nav" class="project-link" target="_blank">View on GitHub</a>
+                <a href="{{ '/projects/drone-navigation/' | relative_url }}" class="project-link">Project Details</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Visualization Tool Project -->
+    <div class="project-item" data-categories="software">
+        <div class="project-image">
+            <img src="{{ '/wp-content/uploads/2022/11/data-vis-tool.jpg' | relative_url }}" alt="Data Visualization Tool">
+        </div>
+        <div class="project-details">
+            <h2>Data Visualization Tool</h2>
+            <div class="project-meta">
+                <span class="project-date">November 2022</span>
+                <div class="project-tags">
+                    <span class="tag">#software</span>
+                </div>
+            </div>
+            <div class="project-description">
+                <p>A lightweight data visualization library built with modern JavaScript. This tool makes it easy to create interactive charts and graphs for web applications, with a focus on performance and customization.</p>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/username/datavis" class="project-link" target="_blank">View on GitHub</a>
+                <a href="{{ '/projects/data-visualization/' | relative_url }}" class="project-link">Project Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-item');
+    const projects = document.querySelectorAll('.project-item');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(b => b.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            const category = this.getAttribute('data-category');
+            
+            // Show/hide projects based on category
+            projects.forEach(project => {
+                if (category === 'all') {
+                    project.style.display = 'flex';
+                } else {
+                    const categories = project.getAttribute('data-categories');
+                    if (categories.includes(category)) {
+                        project.style.display = 'flex';
+                    } else {
+                        project.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+});
+</script>

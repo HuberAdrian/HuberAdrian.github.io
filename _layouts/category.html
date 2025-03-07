@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<div class="page-title">
+    <h1>Writing: #{{ page.category }}</h1>
+</div>
+
+<div class="topic-filter">
+    <a href="{{ '/writing/' | relative_url }}" class="filter-item">All</a>
+    <a href="{{ '/writing/category/quantum/' | relative_url }}" class="filter-item {% if page.category == 'quantum' %}active{% endif %}">#quantum</a>
+    <a href="{{ '/writing/category/hardware/' | relative_url }}" class="filter-item {% if page.category == 'hardware' %}active{% endif %}">#hardware</a>
+    <a href="{{ '/writing/category/economics/' | relative_url }}" class="filter-item {% if page.category == 'economics' %}active{% endif %}">#economics</a>
+    <a href="{{ '/writing/category/fintech/' | relative_url }}" class="filter-item {% if page.category == 'fintech' %}active{% endif %}">#fintech</a>
+    <a href="{{ '/writing/category/data-science/' | relative_url }}" class="filter-item {% if page.category == 'data-science' %}active{% endif %}">#data science</a>
+</div>
+
+<div class="articles-list">
+    {% for post in site.posts %}
+        {% if post.categories contains page.category %}
+        <article class="article-item">
+            <div class="article-date">{{ post.date | date: "%b %d, %Y" }}</div>
+            <div class="article-content">
+                <h2><a href="{{ post.url | relative_url }}">{% if post.math_symbol %}<span class="math-symbol">{{ post.math_symbol }}</span>{% endif %}{{ post.title }}</a></h2>
+                <div class="article-excerpt">
+                    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                </div>
+                <div class="article-meta">
+                    {% for category in post.categories %}
+                    <span class="tag">#{{ category }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </article>
+        {% endif %}
+    {% endfor %}
+</div>

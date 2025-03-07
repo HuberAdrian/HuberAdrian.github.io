@@ -1,0 +1,34 @@
+title: Adrian Huber
+description: Personal website and blog
+url: https://adrian-huber.org
+baseurl: ""
+
+# GitHub Pages automatically sets the following
+markdown: kramdown
+lsi: false
+safe: true
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /writing/:categories/:title/
+
+# Default layouts
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+  -
+    scope:
+      path: "_posts"
+    values:
+      layout: post
