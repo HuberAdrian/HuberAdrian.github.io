@@ -2,8 +2,9 @@
 layout: post
 title: "Linear Algebra and Quantum Mechanics"
 date: 2024-10-03
-categories: [quantum, math, study]
+categories: [quantum]
 math_symbol: "ψ"
+usemathjax: true
 ---
 
 During my bachelors in mechanical engineering, I had a lot of math lectures. But I didn't need to "update" the views I had about basic mathematical terms. I mostly continued the mathematical thinking which I still had from my A-levels. This changed when I started learning about Quantum Mechanics. I needed to question the previous knowledge I had, especially about linear algebra.
@@ -81,7 +82,7 @@ For finite-dimensional vector spaces, the number of the vectors in a basis equal
 
 - A **linear operator** A is a linear transformation from a vector space to itself.
 
-<img src="/wp-content/uploads/2024/10/linear-transformations.png" alt="Linear transformations diagram" style="max-width: 100%; height: auto;">
+<img src="/wp-content/uploads/2024/10/linear-transformations.png" alt="Linear transformations diagram" style="max-width: 70%; height: auto;">
 
 ## Function ⟷ Linear Transformation
 
@@ -128,7 +129,7 @@ $$
 
 Now is also a good time to distinguish between a set, vector spaces and function spaces. Because by definition, a function space is actually a type of vector space.
 
-<img src="/wp-content/uploads/2024/10/sets-vector-spaces.png" alt="Relationship between sets, vector spaces, and function spaces" style="max-width: 100%; height: auto;">
+<img src="/wp-content/uploads/2024/10/sets-vector-spaces.png" alt="Relationship between sets, vector spaces, and function spaces" style="max-width: 70%; height: auto;">
 
 ### Sets
 A collection of objects with no inherent structure or operations defined. These elements could be anything, for examples: {1, 2, 3}, {apple, banana, cherry}, {x | x is a real number}.
@@ -200,7 +201,7 @@ Each basis vector represents a possible outcome of a measurement. The components
 
 For a two-level quantum system (qubit), we can actually visualize the state on a sphere called the Bloch sphere. While this isn't a general visualization for all quantum states, it's a useful bridge from classical to quantum thinking. In this representation, the north and south poles might represent the basis states $$|0\rangle$$ and $$|1\rangle$$, while any point on the surface represents a superposition of these states.
 
-<img src="/wp-content/uploads/2024/10/bloch-sphere.png" alt="Bloch sphere representation" style="max-width: 100%; height: auto;">
+<img src="/wp-content/uploads/2024/10/bloch-sphere.png" alt="Bloch sphere representation" style="max-width: 70%; height: auto;">
 
 I also asked my professor about it. He said: "At one point, you don't actually think about visualising the system. The mathematical framework itself becomes the 'visualization' in a sense".
 
