@@ -2,8 +2,8 @@
 layout: post
 title: "Between Recession and Inflation | Macroeconomic view"
 date: 2022-03-24
-categories: [economics-finance]
-tags: [economics-finance]
+categories: [economics]
+tags: [economics]
 ---
 
 Current macroeconomic trends are fascinating to watch, but scary at the same time. Over the next months, many different outcomes are possible, depending on how current issues like the Ukraine war and the rising inflation play out.

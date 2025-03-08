@@ -14,11 +14,14 @@ kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
 
+# Add excerpt separator
+excerpt_separator: <!--more-->
+
 # Collections
 collections:
   posts:
     output: true
-    permalink: /writing/:categories/:title/
+    permalink: /writing/:title/
 
 # Default layouts
 defaults:

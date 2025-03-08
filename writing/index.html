@@ -1,160 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Writing | Adrian Huber</title>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="/" class="logo">adrian@huber:~$</a>
-                <nav>
-                    <ul>
-                        <li><a href="/writing" class="active">Writing</a></li>
-                        <li><a href="/research">Research</a></li>
-                        <li><a href="/projects">Projects</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-    
-    <main class="container">
-        <div class="page-title">
-            <h1>Writing</h1>
-        </div>
-        
-        <div class="topic-filter">
-            <a href="/writing" class="filter-item active">All</a>
-            <a href="/writing?topic=quantum" class="filter-item">#quantum</a>
-            <a href="/writing?topic=hardware" class="filter-item">#hardware</a>
-            <a href="/writing?topic=economics" class="filter-item">#economics</a>
-            <a href="/writing?topic=fintech" class="filter-item">#fintech</a>
-            <a href="/writing?topic=data-science" class="filter-item">#data science</a>
-        </div>
-        
-        <div class="articles-list">
-            <article class="article-item">
-                <div class="article-date">Mar 01, 2025</div>
-                <div class="article-content">
-                    <h2><a href="/writing/quantum-mechanics/linear-algebra"><span class="math-symbol">ψ</span> Linear Algebra Fundamentals for Quantum Computing</a></h2>
-                    <div class="article-excerpt">
-                        <p>Understanding linear algebra is essential for quantum computing. This article explores the fundamental concepts that connect mathematical principles to quantum operations...</p>
-                    </div>
-                    <div class="article-meta">
-                        <span class="tag">#quantum</span>
-                        <span class="tag">#math</span>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="article-item">
-                <div class="article-date">Feb 15, 2025</div>
-                <div class="article-content">
-                    <h2><a href="/writing/hardware/prototypes">Building Hardware Prototypes: Lessons Learned</a></h2>
-                    <div class="article-excerpt">
-                        <p>After building several hardware prototypes for various projects, I've accumulated some practical insights that might help others avoid common pitfalls...</p>
-                    </div>
-                    <div class="article-meta">
-                        <span class="tag">#hardware</span>
-                        <span class="tag">#projects</span>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="article-item">
-                <div class="article-date">Jan 28, 2025</div>
-                <div class="article-content">
-                    <h2><a href="/writing/decentralization/math-models"><span class="math-symbol">Σ</span> Mathematical Models in Decentralized Systems</a></h2>
-                    <div class="article-excerpt">
-                        <p>Exploring the mathematical principles behind decentralized systems and how they inform the design of robust financial networks...</p>
-                    </div>
-                    <div class="article-meta">
-                        <span class="tag">#finance</span>
-                        <span class="tag">#math</span>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="article-item">
-                <div class="article-date">Jan 12, 2025</div>
-                <div class="article-content">
-                    <h2><a href="/writing/data/recommender-systems">Recommender Systems: A Practical Overview</a></h2>
-                    <div class="article-excerpt">
-                        <p>A deep dive into modern recommender system architectures, focusing on collaborative filtering and content-based approaches with practical implementation tips...</p>
-                    </div>
-                    <div class="article-meta">
-                        <span class="tag">#data science</span>
-                        <span class="tag">#algorithms</span>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="article-item">
-                <div class="article-date">Dec 05, 2024</div>
-                <div class="article-content">
-                    <h2><a href="/writing/economics/security-regulations">What is a Security? A Look into SEC Charges</a></h2>
-                    <div class="article-excerpt">
-                        <p>Analyzing recent SEC charges against crypto exchanges and what they tell us about the evolving regulatory landscape for digital assets...</p>
-                    </div>
-                    <div class="article-meta">
-                        <span class="tag">#economics</span>
-                        <span class="tag">#fintech</span>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="article-item">
-                <div class="article-date">Nov 18, 2024</div>
-                <div class="article-content">
-                    <h2><a href="/writing/hardware/drone-design">Designing Autonomous Navigation for Drones</a></h2>
-                    <div class="article-excerpt">
-                        <p>My approach to creating a computer vision system for indoor drone navigation, covering both the hardware setup and software architecture...</p>
-                    </div>
-                    <div class="article-meta">
-                        <span class="tag">#hardware</span>
-                        <span class="tag">#computer vision</span>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </main>
-    
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="copyright">
-                    &copy; 2025 Adrian Huber
-                </div>
-            </div>
-        </div>
-    </footer>
+---
+layout: default
+title: Writing
+---
 
-    <script>
-        // Simple JavaScript to highlight active filter
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get current URL search params
-            const urlParams = new URLSearchParams(window.location.search);
-            const topic = urlParams.get('topic');
-            
-            // Get all filter items
-            const filters = document.querySelectorAll('.filter-item');
-            
-            // Remove active class from all
-            filters.forEach(filter => filter.classList.remove('active'));
-            
-            // If no topic, set 'All' as active, otherwise set the matching topic
-            if (!topic) {
-                document.querySelector('.filter-item').classList.add('active');
-            } else {
-                document.querySelector(`.filter-item[href="/writing?topic=${topic}"]`)?.classList.add('active');
+<div class="page-title">
+    <h1>Writing</h1>
+</div>
+
+<div class="topic-filter">
+    <a href="{{ '/writing/' | relative_url }}" class="filter-item {% if page.url == '/writing/' %}active{% endif %}">All</a>
+    {% assign all_categories = site.posts | map: "categories" | compact | flatten | uniq | sort %}
+    {% for category in all_categories %}
+    <a href="{{ '/writing/?topic=' | append: category | relative_url }}" class="filter-item" data-category="{{ category }}">#{{ category }}</a>
+    {% endfor %}
+</div>
+
+<div class="articles-list">
+    {% for post in site.posts %}
+    <article class="article-item" {% if include.topic %}data-category="{{ include.topic }}"{% endif %}>
+        <div class="article-date">{{ post.date | date: "%b %d, %Y" }}</div>
+        <div class="article-content">
+            <h2><a href="{{ post.url | relative_url }}">{% if post.math_symbol %}<span class="math-symbol">{{ post.math_symbol }}</span>{% endif %}{{ post.title }}</a></h2>
+            <div class="article-excerpt">
+                <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            </div>
+            <div class="article-meta">
+                {% for category in post.categories %}
+                <span class="tag">#{{ category }}</span>
+                {% endfor %}
+            </div>
+        </div>
+    </article>
+    {% endfor %}
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get current URL search params
+        const urlParams = new URLSearchParams(window.location.search);
+        const topic = urlParams.get('topic');
+        
+        // Get all filter items
+        const filters = document.querySelectorAll('.filter-item');
+        
+        // Remove active class from all
+        filters.forEach(filter => filter.classList.remove('active'));
+        
+        // If no topic, set 'All' as active, otherwise set the matching topic
+        if (!topic) {
+            document.querySelector('.filter-item').classList.add('active');
+        } else {
+            const topicFilter = document.querySelector(`.filter-item[data-category="${topic}"]`);
+            if (topicFilter) {
+                topicFilter.classList.add('active');
             }
-        });
-    </script>
-</body>
-</html>
+            
+            // Filter articles based on selected topic
+            const articles = document.querySelectorAll('.article-item');
+            articles.forEach(article => {
+                const categories = Array.from(article.querySelectorAll('.tag')).map(tag => 
+                    tag.textContent.substring(1) // Remove # from tag
+                );
+                
+                if (!categories.includes(topic)) {
+                    article.style.display = 'none';
+                } else {
+                    article.style.display = 'block';
+                }
+            });
+        }
+    });
+</script>
