@@ -8,91 +8,37 @@ title: Research
 
 <div class="topic-filter">
     <button class="filter-item active" data-category="all">All</button>
-    <button class="filter-item" data-category="quantum">#quantum</button>
-    <button class="filter-item" data-category="data-science">#data science</button>
-    <button class="filter-item" data-category="economics">#economics</button>
+    {% assign all_categories = site.research | map: "categories" | compact | flatten | uniq | sort %}
+    {% for category in all_categories %}
+    <button class="filter-item" data-category="{{ category }}">#{{ category }}</button>
+    {% endfor %}
 </div>
 
 <div class="research-container">
-    <!-- Quantum Research -->
-    <div class="research-item" data-categories="quantum">
+    {% for item in site.research %}
+    <div class="research-item" data-categories="{% for category in item.categories %}{{ category }} {% endfor %}">
         <div class="research-content">
-            <h2>Efficient Quantum Circuit Optimization</h2>
+            <h2>{{ item.title }}</h2>
             <div class="research-meta">
-                <div class="research-date">Published: June 2024</div>
+                <div class="research-date">{% if item.date %}Published: {{ item.date | date: "%B %Y" }}{% endif %}</div>
                 <div class="research-tags">
-                    <span class="tag">#quantum</span>
+                    {% for category in item.categories %}
+                    <span class="tag">#{{ category }}</span>
+                    {% endfor %}
                 </div>
             </div>
             <div class="research-abstract">
-                <p>This research explores novel techniques for optimizing quantum circuits to reduce gate count and improve fidelity. By applying transformations based on group theory, we demonstrate a 27% reduction in two-qubit gates for typical algorithms while maintaining computational equivalence.</p>
+                <p>{{ item.abstract | default: item.excerpt | strip_html | truncate: 200 }}</p>
             </div>
             <div class="research-links">
-                <a href="https://arxiv.org/abs/xxxx.xxxxx" class="research-link" target="_blank">arXiv Preprint</a>
-                <a href="{{ '/research/quantum-circuit-optimization/' | relative_url }}" class="research-link">Read More</a>
+                {% if item.external_url %}
+                <a href="{{ item.external_url }}" class="research-link" target="_blank">External Resource</a>
+                {% endif %}
+                <a href="{{ item.url | relative_url }}" class="research-link">Read More</a>
             </div>
         </div>
     </div>
-
-    <!-- Data Science Research -->
-    <div class="research-item" data-categories="data-science">
-        <div class="research-content">
-            <h2>Interpretable Deep Learning for Time Series Forecasting</h2>
-            <div class="research-meta">
-                <div class="research-date">Published: April 2024</div>
-                <div class="research-tags">
-                    <span class="tag">#data science</span>
-                </div>
-            </div>
-            <div class="research-abstract">
-                <p>This paper introduces a novel architecture that combines the predictive power of deep learning with interpretability mechanisms for time series forecasting. We demonstrate superior performance on benchmark datasets while providing insights into model decision-making through attention-based visualization techniques.</p>
-            </div>
-            <div class="research-links">
-                <a href="https://ieeexplore.ieee.org/" class="research-link" target="_blank">IEEE Publication</a>
-                <a href="{{ '/research/interpretable-deep-learning/' | relative_url }}" class="research-link">Read More</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Economics Research -->
-    <div class="research-item" data-categories="economics">
-        <div class="research-content">
-            <h2>Decentralized Finance: Regulatory Challenges and Market Efficiency</h2>
-            <div class="research-meta">
-                <div class="research-date">Published: January 2024</div>
-                <div class="research-tags">
-                    <span class="tag">#economics</span>
-                </div>
-            </div>
-            <div class="research-abstract">
-                <p>This research paper analyzes the emerging regulatory frameworks for decentralized finance (DeFi) across various jurisdictions and their impact on market efficiency. Through empirical analysis of market data and regulatory events, we identify key mechanisms through which regulatory clarity influences liquidity, volatility, and market participation.</p>
-            </div>
-            <div class="research-links">
-                <a href="https://papers.ssrn.com/" class="research-link" target="_blank">SSRN Preprint</a>
-                <a href="{{ '/research/defi-regulatory-challenges/' | relative_url }}" class="research-link">Read More</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Another Data Science Research -->
-    <div class="research-item" data-categories="data-science">
-        <div class="research-content">
-            <h2>Feature Extraction Methods for High-Dimensional Data</h2>
-            <div class="research-meta">
-                <div class="research-date">Published: October 2023</div>
-                <div class="research-tags">
-                    <span class="tag">#data science</span>
-                </div>
-            </div>
-            <div class="research-abstract">
-                <p>We present a comparative study of feature extraction methods for high-dimensional data, focusing on computational efficiency and information preservation. Our results show that a hybrid approach combining domain-specific knowledge with unsupervised learning techniques yields optimal performance across diverse datasets.</p>
-            </div>
-            <div class="research-links">
-                <a href="https://www.sciencedirect.com/" class="research-link" target="_blank">Journal Publication</a>
-                <a href="{{ '/research/feature-extraction-high-dimensional/' | relative_url }}" class="research-link">Read More</a>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 
 <script>
@@ -116,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     item.style.display = 'block';
                 } else {
                     const categories = item.getAttribute('data-categories');
-                    if (categories.includes(category)) {
+                    if (categories && categories.includes(category)) {
                         item.style.display = 'block';
                     } else {
                         item.style.display = 'none';

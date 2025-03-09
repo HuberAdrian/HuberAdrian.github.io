@@ -1,0 +1,53 @@
+---
+layout: default
+---
+<article class="project-article">
+    <header class="project-header">
+        <h1 class="project-title">{{ page.title }}</h1>
+        <div class="project-meta">
+            {% if page.date %}
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+            {% endif %}
+            
+            {% if page.github_url or page.demo_url %}
+            <div class="project-top-links">
+                {% if page.github_url %}
+                <a href="{{ page.github_url }}" class="project-link" target="_blank">View on GitHub</a>
+                {% endif %}
+                {% if page.demo_url %}
+                <a href="{{ page.demo_url }}" class="project-link" target="_blank">Live Demo</a>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+        
+        {% if page.featured_image %}
+        <div class="project-featured-image">
+            <img src="{{ page.featured_image | relative_url }}" alt="{{ page.title }}">
+        </div>
+        {% endif %}
+    </header>
+
+    <div class="project-content">
+        {{ content }}
+    </div>
+    
+    {% if page.technologies %}
+    <div class="project-technologies">
+        <h3>Technologies Used</h3>
+        <ul>
+            {% for tech in page.technologies %}
+            <li>{{ tech }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    
+    <div class="project-footer">
+        <a href="{{ '/projects/' | relative_url }}" class="back-link">&larr; Back to All Projects</a>
+    </div>
+</article>
+
+{% if page.usemathjax %}
+    {% include mathjax.html %}
+{% endif %}

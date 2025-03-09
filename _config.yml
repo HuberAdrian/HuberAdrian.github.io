@@ -22,6 +22,12 @@ collections:
   posts:
     output: true
     permalink: /writing/:title/
+  research:
+    output: true
+    permalink: /research/:title/
+  projects:
+    output: true
+    permalink: /projects/:title/
 
 # Default layouts
 defaults:
@@ -35,3 +41,13 @@ defaults:
       path: "_posts"
     values:
       layout: post
+  -
+    scope:
+      path: "_research"
+    values:
+      layout: research
+  -
+    scope:
+      path: "_projects"
+    values:
+      layout: project

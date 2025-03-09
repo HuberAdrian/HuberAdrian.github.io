@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<article class="research-article">
+    <header class="research-header">
+        <h1 class="research-title">{{ page.title }}</h1>
+        <div class="research-meta">
+            {% if page.date %}
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+            {% endif %}
+            {% if page.categories %}
+            <div class="research-categories">
+                {% for category in page.categories %}
+                <span class="tag">#{{ category }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        
+        {% if page.abstract %}
+        <div class="research-abstract">
+            <h3>Abstract</h3>
+            <p>{{ page.abstract }}</p>
+        </div>
+        {% endif %}
+        
+        {% if page.external_url %}
+        <div class="research-links">
+            <a href="{{ page.external_url }}" class="research-link" target="_blank">External Resource</a>
+        </div>
+        {% endif %}
+    </header>
+
+    <div class="research-content">
+        {{ content }}
+    </div>
+    
+    <div class="research-footer">
+        <a href="{{ '/research/' | relative_url }}" class="back-link">&larr; Back to All Research</a>
+    </div>
+</article>
+
+{% if page.usemathjax %}
+    {% include mathjax.html %}
+{% endif %}
