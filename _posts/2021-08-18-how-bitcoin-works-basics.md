@@ -2,7 +2,7 @@
 layout: post
 title: "How Bitcoin Works (Basics)"
 date: 2021-08-18
-categories: [web3]
+categories: [fintech]
 ---
 
 In this series, I'm going to explore how Bitcoin works. Focusing on the technical point of view, I'm trying to keep it as simple as possible. If you're interested in a political/economical perspective, I highly recommend "[The Bitcoin Standard](https://saifedean.com/thebitcoinstandard/)" from Saifedan Ammous.
