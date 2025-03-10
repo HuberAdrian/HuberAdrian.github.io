@@ -7,7 +7,8 @@ title: Projects
 </div>
 
 <div class="projects-container">
-    {% for project in site.projects %}
+    {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+    {% for project in sorted_projects %}
     <div class="project-item">
         <div class="project-image">
             {% if project.featured_image %}
@@ -17,16 +18,17 @@ title: Projects
         <div class="project-details">
             <h2>{{ project.title }}</h2>
             <div class="project-meta">
-                {% if project.date %}
                 <span class="project-date">{{ project.date | date: "%B %Y" }}</span>
-                {% endif %}
             </div>
             <div class="project-description">
-                <p>{{ project.excerpt | strip_html | truncate: 150 }}</p>
+                <p>{{ project.excerpt | strip_html | truncate: 200 }}</p>
             </div>
             <div class="project-links">
                 {% if project.github_url %}
                 <a href="{{ project.github_url }}" class="project-link" target="_blank">View on GitHub</a>
+                {% endif %}
+                {% if project.demo_url %}
+                <a href="{{ project.demo_url }}" class="project-link" target="_blank">Live Demo</a>
                 {% endif %}
                 <a href="{{ project.url | relative_url }}" class="project-link">Project Details</a>
             </div>
