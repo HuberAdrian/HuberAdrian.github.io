@@ -24,15 +24,36 @@ title: Projects
                 <p>{{ project.excerpt | strip_html | truncate: 200 }}</p>
             </div>
             <div class="project-links">
+                <a href="{{ project.url | relative_url }}" class="project-link primary-link">Project Details</a>
                 {% if project.github_url %}
-                <a href="{{ project.github_url }}" class="project-link" target="_blank">View on GitHub</a>
+                <a href="{{ project.github_url }}" class="project-link secondary-link" target="_blank">View on GitHub</a>
                 {% endif %}
                 {% if project.demo_url %}
-                <a href="{{ project.demo_url }}" class="project-link" target="_blank">Live Demo</a>
+                <a href="{{ project.demo_url }}" class="project-link secondary-link" target="_blank">Live Demo</a>
                 {% endif %}
-                <a href="{{ project.url | relative_url }}" class="project-link">Project Details</a>
             </div>
         </div>
     </div>
     {% endfor %}
 </div>
+
+<style>
+/* Override the button styling to fix visibility issues */
+.project-links .project-link.primary-link {
+    background-color: var(--primary);
+    color: white;
+}
+
+.project-links .project-link.primary-link:hover {
+    background-color: var(--secondary);
+}
+
+.project-links .project-link.secondary-link {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.project-links .project-link.secondary-link:hover {
+    background-color: rgba(67, 97, 238, 0.1);
+}
+</style>
