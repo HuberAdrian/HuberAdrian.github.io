@@ -36,7 +36,8 @@ title: Home
 </div>
 
 <div class="projects-grid">
-    {% for project in site.projects limit:2 %}
+    {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+    {% for project in sorted_projects limit:2 %}
     <a href="{{ project.url | relative_url }}" class="project-card">
         <div class="project-image">
             {% if project.featured_image %}
