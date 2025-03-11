@@ -1,0 +1,43 @@
+---
+layout: default
+title: Page Not Found
+permalink: /404.html
+---
+
+<div class="page-title">
+    <h1>404</h1>
+</div>
+
+<div class="intro-section">
+    <div class="intro-text">
+        <p>Oops! The page you're looking for doesn't exist.</p>
+        <p>It seems you've ventured into uncharted territory. The page you're looking for might have been moved, renamed, or doesn't exist anymore.</p>
+        
+        <div class="section-header" style="margin-top: 2rem;">
+            <span class="section-marker">?</span>What to do now
+        </div>
+        
+        <ul style="list-style-type: none; padding-left: 0; margin: 1.5rem 0;">
+            <li style="margin-bottom: 0.75rem;">• Check the URL for typos</li>
+            <li style="margin-bottom: 0.75rem;">• Go back to the <a href="{{ '/' | relative_url }}">homepage</a></li>
+            <li style="margin-bottom: 0.75rem;">• Explore recent <a href="{{ '/writing/' | relative_url }}">articles</a></li>
+            <li style="margin-bottom: 0.75rem;">• Check out my <a href="{{ '/projects/' | relative_url }}">projects</a></li>
+        </ul>
+        
+        <div class="signature">
+            Sorry for the inconvenience,<br>Adrian
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the unknown URL path
+        const path = window.location.pathname;
+        
+        // Log 404 to console for debugging
+        console.log(`404 error: ${path} not found`);
+        
+        // You could add analytics tracking here if desired
+    });
+</script>
