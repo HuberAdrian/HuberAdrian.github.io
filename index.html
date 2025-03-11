@@ -20,7 +20,7 @@ title: Home
     </div>
     
     <div class="intro-text">
-        <p>I irregularly post about anything I do. This blog is just a reflection of my personal experiences, and I use it to clear my thoughts. If you have some corrections or additions, feel free to contact me!</p>
+        <p>I occasionally post about anything I do. This blog is just a reflection of my personal experiences, and I use it to clear my thoughts. If you have some corrections or additions, feel free to contact me!</p>
         
         <div class="signature">
             Enjoy,<br>Adrian
@@ -36,24 +36,20 @@ title: Home
 </div>
 
 <div class="projects-grid">
-    <a href="{{ '/projects/quantum-simulator/' | relative_url }}" class="project-card">
+    {% for project in site.projects limit:2 %}
+    <a href="{{ project.url | relative_url }}" class="project-card">
         <div class="project-image">
-            <img src="{{ '/wp-content/uploads/2022/03/quantum-simulator.jpg' | relative_url }}" alt="Quantum Simulator Project">
+            {% if project.featured_image %}
+            <img src="{{ project.featured_image | relative_url }}" alt="{{ project.title }}">
+            {% endif %}
         </div>
         <div class="project-content">
-            <h3>Quantum Circuit Simulator</h3>
-            <p>A browser-based quantum circuit simulator for educational purposes</p>
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.excerpt | strip_html | truncate: 100 }}</p>
+            <div class="project-date">{{ project.date | date: "%B %Y" }}</div>
         </div>
     </a>
-    <a href="{{ '/projects/drone-navigation/' | relative_url }}" class="project-card">
-        <div class="project-image">
-            <img src="{{ '/wp-content/uploads/2023/08/drone-navigation.jpg' | relative_url }}" alt="Drone Navigation Project">
-        </div>
-        <div class="project-content">
-            <h3>Autonomous Drone Navigation</h3>
-            <p>Computer vision system for indoor drone navigation</p>
-        </div>
-    </a>
+    {% endfor %}
 </div>
 
 <hr class="section-divider">
@@ -66,7 +62,7 @@ title: Home
 <div class="latest-content">
     {% for post in site.posts limit:3 %}
     <a href="{{ post.url | relative_url }}" class="article-card">
-        <div class="article-date">{{ post.date | date: "%b %d" }}</div>
+        <div class="article-date">{{ post.date | date: "%b %d, %Y" }}</div>
         <div class="article-content">
             <h3>{% if post.math_symbol %}<span class="math-symbol">{{ post.math_symbol }}</span>{% endif %}{{ post.title }}</h3>
             <div class="article-meta">
