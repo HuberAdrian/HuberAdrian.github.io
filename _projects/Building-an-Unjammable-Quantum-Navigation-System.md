@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "Building an Quantum Inertial Navigation System"
+title: "Building an Unjammable Quantum Inertial Navigation System"
 date: 2025-03-01
 featured_image: /wp-content/uploads/2025/03/quantum-navigation-placeholder.png
 github_url: 
