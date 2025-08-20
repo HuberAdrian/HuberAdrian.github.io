@@ -2,7 +2,7 @@
 layout: project
 title: "Quantum Ghost Imaging: Creating Images Through Quantum Correlations"
 date: 2025-05-04
-featured_image: /wp-content/uploads/2025/05/quantum-ghost-imaging-setup.png
+featured_image: /wp-content/uploads/2025/05/QGhost_Result_1.png
 github_url: 
 technologies:
  - Quantum Optics
@@ -64,10 +64,12 @@ Both test objects are clearly visible in the reconstructed ghost images. The "T"
 
 <div style="text-align:center">
 <img src="/wp-content/uploads/2025/05/QGhost_Result_2.png" alt="Entangled Counts (left) vs Entangled Counts (right)" style="width: 70%; height: auto;">
+<br><em>Entangled Counts (left) vs Entangled Counts (right)</em>
 </div>
 
 <div style="text-align:center">
 <img src="/wp-content/uploads/2025/05/QGhost_Result_3.png" alt="Same Results displayed as a 3D-Column Plot" style="width: 70%; height: auto;">
+<br><em>Same Results displayed as a 3D-Column Plot</em>
 </div>
 
 ## Conclusions
