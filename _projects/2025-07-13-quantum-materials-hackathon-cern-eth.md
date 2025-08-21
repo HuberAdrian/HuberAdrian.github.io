@@ -20,7 +20,7 @@ During my time as a summer research student at CERN in Geneva, I participated in
 <div style="text-align:center">
 <img src="/wp-content/uploads/2025/07/Q_intro_1.png" alt="Our team at the end of a long, semi-productive work session in front of the Science Gateway" style="width: 48%; height: auto; display: inline-block; margin-right: 2%;">
 <img src="/wp-content/uploads/2025/07/Q_intro_2.png" alt="Presentation of our solution" style="width: 48%; height: auto; display: inline-block;">
-<br><em>Our team at the end of a long, semi-productive work session in front of the Science Gateway (left) and presentation of our solution (right)</em>
+<br><em>Our team at the end of a long, semi-productive work session in front of the Science Gateway (right) and presentation of our solution (left)</em>
 </div>
 
 ---
