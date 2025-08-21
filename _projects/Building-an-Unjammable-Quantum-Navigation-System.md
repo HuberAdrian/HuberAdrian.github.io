@@ -2,7 +2,7 @@
 layout: project
 title: "Building an Unjammable Quantum Inertial Navigation System"
 date: 2025-03-01
-featured_image: /wp-content/uploads/2025/03/quantum-navigation-placeholder.png
+featured_image: /wp-content/uploads/2025/03/quantum-navigation-first.png
 github_url: 
 technologies:
   - Quantum Sensors
@@ -13,6 +13,8 @@ usemathjax: true
 ---
 
 ## Project in Development
+
+**[Project is prostponed until Sep 25 when we get new lab equipment at our university]**
 
 <div style="text-align:center">
 <img src="/wp-content/uploads/2025/03/quantum-navigation-concept.png" alt="Quantum Navigation System Concept" style="width: 70%; height: auto;">
