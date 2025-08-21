@@ -10,11 +10,15 @@ usemathjax: false
 
 <div style="text-align:center">
 <img src="/wp-content/uploads/2025/06/Cern_Research_1.png" alt="CERN vacuum pressure sensor research setup" style="width: 70%; height: auto;">
+<br><em>Me giving a presentation about the current progress in front of the Experimental Physics Department</em>
 </div>
 
 ## Brief Description
 
-I was fortunate to be accepted as a summer research student at the biggest particle accelerator at CERN in Geneva. Besides all the other events, lectures and all kind of activities, my main project was to investigate how some new vacuum pressure sensors behave once they are exposed to radiation. Due to the radiation inside the LHC, the sensors are prone to have a short lifetime. Especially now with the High Luminosity era, the radiation exposure is even higher. There exist radiation tolerant pressure sensors, although they are extremely expensive. But out of necessity they are used anyway. I was given a new type of sensors that cost only a fraction, but the reaction to radiation is unknown.
+I was selected as a summer research student at CERN in Geneva, where I worked on characterizing radiation tolerance in novel vacuum pressure sensors for the LHC. Many of CERN's vacuum systems operate within detector environments that expose sensors to significant radiation doses, particularly with the upcoming High Luminosity LHC era increasing radiation levels even further.
+Currently, radiation-tolerant pressure sensors cost an order of magnitude more than standard sensors, creating substantial budget constraints for large-scale installations. CERN has historically reduced costs by disassembling non-radiation-tolerant sensors and relocating the vulnerable readout electronics to shielded areas, but this approach remains labor-intensive and expensive.
+My project focused on evaluating a new generation of Pirani vacuum sensors that eliminate integrated readout electronics entirely and as a result is much cheaper then the alternatives. While the price reduction is dramatic, the radiation response of these sensors was unknown. Therefore, a precise characterization of the new sensors was essential.
+The research involved building a test setup to evaluate sensors exposed to different radiation doses, developing readout software for the measurement controller, and performing comparative analysis against reference sensors to assess accuracy, linearity, and operational range after irradiation.
 
 ### **Project still ongoing until 12. September 2025. Once the final report is published, I will add it here**
 
