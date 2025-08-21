@@ -71,8 +71,6 @@ The trickiest part was getting the self-consistent field loop to converge reliab
 
 We successfully demonstrated conductivity predictions for different copper-graphene configurations, showing how the material's electronic properties change with varying graphene content and positioning. While our results were proof-of-concept level, they showed the potential for quantum-enhanced materials discovery.
 
-The project really highlighted how quantum computing could revolutionize computational chemistry and materials science - not just by being faster, but by making previously intractable problems solvable.
-
 ## Presentation
 
 <div style="text-align:center">
@@ -81,5 +79,3 @@ The project really highlighted how quantum computing could revolutionize computa
   <a href="/wp-content/uploads/2025/07/quantum_materials_presentation.pdf" target="_blank">View Full Presentation PDF</a>
 </p>
 </div>
-
-Looking back, this hackathon was a great way to dive into the intersection of quantum computing and materials science. It was fascinating to work on a problem that could have real impact on everything from power transmission efficiency to next-generation electronics, even if we were just scratching the surface of what's possible.
