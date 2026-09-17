@@ -7,10 +7,6 @@ categories: [fintech, economics]
 
 This writeup is a response to John Palmer's ['Digital Nation States and Digital Political Parties'](https://darkblueheaven.com/digitalnations/). He describes how new technologies like Crypto and VR can possibly change the way governments operate.
 
-<div style="text-align:center">
-<img src="/wp-content/uploads/2021/07/voluntary-governments.png" alt="Voluntary Governments" style="width: 70%; height: auto;">
-</div>
-
 ## Politics vs. Business
 
 John points out that the current way of how the (American) government works is exceedingly slow. The System simply doesn't allow quick changes if the present strategies don't work, or a better solution occurs.

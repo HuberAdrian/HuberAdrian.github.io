@@ -3,7 +3,6 @@ layout: project
 title: "Quantum Ghost Imaging: Creating Images Through Quantum Correlations"
 date: 2025-05-04
 featured_image: /wp-content/uploads/2025/05/QGhost_Result_1.png
-github_url: 
 technologies:
  - Quantum Optics
  - Entangled Photons

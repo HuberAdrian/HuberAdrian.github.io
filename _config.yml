@@ -14,6 +14,26 @@ kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
 
+# Plugins. All ship with the github-pages gem; they must still be listed
+# here or they never load (jekyll-feed was in the Gemfile but inactive).
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Keep agent notes and build files out of the published site
+# NOTE: setting `exclude` REPLACES Jekyll's default list, so the defaults are
+# repeated here on purpose.
+exclude:
+  - AGENTS.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+
 # Add excerpt separator
 excerpt_separator: <!--more-->
 

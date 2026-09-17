@@ -1,0 +1,14 @@
+# Jekyll build output & caches
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+vendor/
+.bundle/
+
+# macOS
+.DS_Store
+
+# Local agent working memory — intentionally NOT published and NOT pushed.
+# See §0 of AGENTS.md for why.
+AGENTS.md

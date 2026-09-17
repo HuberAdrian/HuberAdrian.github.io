@@ -186,10 +186,4 @@ With access to more qubits, this approach could scale to larger numbers with opt
 
 ## Participation Certificate
 
-<div style="text-align:center">
-<a href="/wp-content/uploads/2025/03/iquhack-certificate.pdf">
-<img src="/wp-content/uploads/2025/03/iquhack-certificate-thumbnail.png" alt="MIT iQuHack 2025 Participation Certificate" style="width: 70%; height: auto;">
-</a>
-</div>
-
 I received a participation certificate for MIT iQuHack 2025. You can verify my participation using the hash: 8bfd6f1d at the [official iQuHack verification page](https://www.iquise.mit.edu/iQuHACK/2025-01-31).
